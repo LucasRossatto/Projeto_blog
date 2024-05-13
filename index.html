@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
     <title>Document</title>
-</head>
-<body>
-
-    <div>
+  </head>
+  <body>
+    <header>
+      <label for="">Cadastro</label>
+    </header>
+    <main>
+      <div class="form-cadastro">
         <form class="form" id="form">
           <label for="fname">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your name..">
+          <input type="text" id="name" name="name" placeholder="Nome" />
 
           <label for="password">password</label>
-          <input type="text" id="password" name="password" placeholder="Your email..">
+          <input
+            type="text"
+            id="password"
+            name="password"
+            placeholder="Senha"
+          />
 
           <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Your email..">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+          <input type="submit" value="Submit" />
 
-          <label for="phone">Telefone</label>
-          <input type="text" id="phone" name="phone" placeholder="Your phone..">
-
-          <label for="city">Cidade</label>
-          <input type="text" id="city" name="city" placeholder="Your city..">
-
-          <label for="state">Estado</label>
-          <input type="text" id="state" name="state" placeholder="Your state..">
-
-          <input type="submit" value="Submit">
+          <label for="">já tem uma conta? <a href="login.html">Entrar</a></label>
         </form>
       </div>
-
-      <script src="script.js"></script>
-</body>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

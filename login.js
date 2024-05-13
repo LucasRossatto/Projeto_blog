@@ -1,19 +1,16 @@
-const form = document.getElementById("form");
+const login = document.getElementById("formlogin");
 
-form.addEventListener("submit", (e) => {
-  const name = document.getElementById("name");
+login.addEventListener("submit", (e) => {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
-
   e.preventDefault();
 
   const userData = JSON.stringify({
-    name: name.value,
     email: email.value,
-    password: password.value
+    password: password.value,
   });
 
-  fetch("http://10.92.198.38:8080/auth/signup", {
+  fetch("http://10.92.198.38:8080/auth/signin", {
     method: "Post",
     body: userData,
     headers: { "Content-type": "application/json; charset=UTF-8" },
@@ -23,7 +20,4 @@ form.addEventListener("submit", (e) => {
     .catch((err) => console.log(err));
 
   console.log(userData);
-  console.log(name.value);
 });
-
-
