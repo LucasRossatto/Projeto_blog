@@ -3,40 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/index.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
-      <label for="">Cadastro</label>
+      <ul>
+        <a href="post.html">Enviar Post</a>
+        <label for="">Blog</label>
+        <div class="sign">
+          <a href="login.html">Login</a>
+          <a href="cadastro.html">Cadastro</a>
+        </div>
+      </ul>
     </header>
-    <main>
-      <div class="form-cadastro">
-        <form class="form" id="form">
-          <label for="fname">Name</label>
-          <input type="text" id="name" name="name" placeholder="Nome" />
-
-          <label for="password">password</label>
-          <input
-            type="text"
-            id="password"
-            name="password"
-            placeholder="Senha"
-          />
-
-          <label for="email">Email</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Email"
-          />
-          <input type="submit" value="Submit" />
-
-          <label for="">já tem uma conta? <a href="login.html">Entrar</a></label>
-        </form>
-      </div>
-    </main>
-    <script src="script.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>

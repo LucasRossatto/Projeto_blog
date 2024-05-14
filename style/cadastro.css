@@ -23,29 +23,51 @@ main{
   justify-content: center;
 }
 
-.form-cadastro {
-  margin-top: 50px;
-  border-radius: 5px;
-  padding: 20px;
-  width: 50%;
+
+
+form {
+  --bg-light: #efefef;
+  --bg-dark: #707070;
+  --clr: #ffff;
+  --clr-alpha: #9c9c9c60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 500px;
   font-family: sans-serif;
-}
-label{
-  color: #F7F8F8;
+  margin-top: 50px;
+
 }
 
-input[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #000000;
-    color: #ffff;
+
+.label {
+  align-self: flex-start;
+  color: #ffff;
+  font-weight: 600;
+}
+
+input[type=text],
+  form input[type="password"], select {
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: black;
+  outline: 2px solid var(--bg-dark);
+  color: #ffffff;
   }
-  
+
+  input[type=text]:focus,
+  form input[type="password"]:focus {
+    outline: 2px solid var(--clr);
+    color: #efefef;
+  }
+
+
   input[type=submit] {
     width: 100%;
     background-color: #000000;

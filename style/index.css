@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+body{
+    background-color: #151F2C;
+}
+
+  header{
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+    text-align: center;
+    padding: 20px;
+    background-color: #0b1016;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a{
+    color: #ffffff;
+    padding: 10px;
+}
