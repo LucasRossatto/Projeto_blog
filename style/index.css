@@ -18,7 +18,8 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   color: #000000;
   font-family: sans-serif;
   font-weight: bold;
@@ -27,10 +28,7 @@ header {
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-
-#logo-post-align {
-  gap: 10px;
+    margin-bottom: 32px;
 }
 
 .logo img {
@@ -38,11 +36,7 @@ header {
   height: 50px;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 a {
   color: var(--light-blue);
