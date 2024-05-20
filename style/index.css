@@ -1,33 +1,137 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  
-body{
-    background-color: #151F2C;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-  header{
-    display: flex;
-    flex-direction: column;
-    color: #efefef;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 34px;
-    text-align: center;
-    padding: 20px;
-    background-color: #0b1016;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+:root {
+  --white: #ffffff;
+  --ligth-grey: #f7f9f9;
+  --light-blue: #1da1f2;
+}
+
+body {
+  background-color: var(--white);
+}
+
+/* HEADER  */
+
+header {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 34px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+#logo-post-align {
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
 }
 
 ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-a{
-    color: #ffffff;
-    padding: 10px;
+a {
+  color: var(--light-blue);
+  padding: 10px;
+}
+
+/* FIM DO HEADER */
+
+/* POST  */
+
+.feed{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.post{
+  border: #EFF3F4 1px solid;
+  width:600px ;
+  border-radius: 30px;
+  padding: 20px 50px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, #EFF3F4 0px 0px 0px 1px;
+}
+
+/* HEADER POST  */
+
+.header-post{
+  padding: 12px 0;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+
+#text-content {
+  font-size: 18px;
+  font-weight:500;
+}
+
+#name{
+  font-size: 26px;
+}
+
+.img-content{
+  width: 498px;
+  height: 434px;
+  background-color: gray;
+  border-radius: 30px;
+}
+
+#avatar-align{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+#avatar {
+  height: 80px;
+  width: 80px;
+}
+
+#tres-pontos{
+  height: 32px;
+  width: 32px;
+  margin-right: 10px;
+}
+
+/*  FIM DO POST  */
+
+
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  width: 600px;
+}
+.button {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+  height: 30px;
+}
+.img {
+  height: 100%;
 }
