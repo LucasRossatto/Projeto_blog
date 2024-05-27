@@ -1,22 +1,58 @@
-const comments = document.getElementById("comments");
-const like = document.getElementById("like");
+const initialImage = "style/images/curtida-vazia.png";
+const alternateImage = "style/images/curtida-vermelha.png";
+const urlImg = "http://10.92.198.38:8080/";
 
-const initialImage = "style/images/como.png"
-const alternateImage = "style/images/file.png"
+async function getPersons() {
+  const response = await fetch("http://10.92.198.38:8080/feed/posts");
+  const posts = await response.json();
+  console.log(posts);
+}
 
-like.addEventListener("click", function () {
-    const likeImage = like.querySelector('img');
-    if (likeImage.src.includes(initialImage)) {
-        likeImage.src = alternateImage;
-    } else {
-        likeImage.src = initialImage;
-    }
-})
-fetch("10.92.198.38:8080/feed/posts", {
-    method: "Post",
-    body: userData,
-    headers: { "Content-type": "application/json; charset=UTF-8" },
-  })
-    .then((result) => result.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+fetch("http://10.92.198.38:8080/feed/posts")
+  .then((response) => response.json())
+  .then((data) => cards(data));
+
+function cards(data) {
+  console.log(data);
+
+  const arrayDatas = data.posts;
+  const feed = document.querySelector(".feed");
+
+  arrayDatas.forEach((element) => {
+    const post = document.createElement("div");
+    post.className = "post";
+    post.innerHTML = `
+        <div class="header-post">
+          <ul>
+            <div id="avatar-align">
+              <img src="./style/images/user.png" id="avatar" alt="" />
+              <h1 id="name">${element.title}</h1>
+            </div>
+            <img src="style/images/3-points.png" id="tres-pontos" alt="" />
+          </ul>
+        </div>
+        <section>
+          <h1 id="text-content">${element.content}</h1>
+          <div class="img-content">
+            <img src="${urlImg + element.imageUrl}" alt="Post image" />
+          </div>
+          <div class="actions">
+            <button class="button like">
+              <img src="${initialImage}" alt="like" class="img like-img" />
+            </button>
+          </div>
+        </section>
+    `;
+    feed.appendChild(post);
+
+    const likeButton = post.querySelector(".like");
+    likeButton.addEventListener("click", () => {
+      const likeImg = likeButton.querySelector(".like-img");
+      if (likeImg.src.includes(initialImage)) {
+        likeImg.src = alternateImage;
+      } else {
+        likeImg.src = initialImage;
+      }
+    });
+  });
+}

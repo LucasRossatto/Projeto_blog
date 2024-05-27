@@ -45,6 +45,7 @@ main {
 
 label {
   color: #000000;
+  font-weight: 500;
 }
 
 input[type="text"],
@@ -76,8 +77,8 @@ a {
 }
 
 .custum-file-upload {
-  height: 400px;
-  width: 600px;
+  width: 498px;
+  height: 434px;
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -86,7 +87,7 @@ a {
   align-items: center;
   justify-content: center;
   border: 2px solid #cacaca;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--ligth-grey);
   padding: 1.5rem;
   margin: 20px 0 ;
   border-radius: 30px;
@@ -117,4 +118,16 @@ a {
 
 .custum-file-upload input {
   display: none;
+}
+
+#enviar{
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 32px;
+  background-color: var(--light-blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
 }

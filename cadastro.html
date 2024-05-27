@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/global.css">
-    <link rel="stylesheet" href="style/cadastro.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="style/images/twitter.png" alt="" />
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/global.css">
+  <link rel="stylesheet" href="style/cadastro.css">
+  <title>Login</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="style/images/twitter.png" alt="Logo">
+    </div>
+    <nav>
       <ul>
-        <a href="index.html">Home</a>
+        <li><a href="index.html">Home</a></li>
       </ul>
-    </header>
-    <main>
-      <form class="form" id="form">
-        <div class="logo">
-          <img src="style/images/twitter1.png" alt="" />
-        </div>
-        <label id="label-principal" for="">Login</label>
-        <label class="label" for="fname">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Nome"
-          class="label"
-        />
-
-        <label for="password" class="label">password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Senha"
-        />
-
+    </nav>
+  </header>
+  <main>
+    <div class="bemvindo">
+      <h1>Bem-vindo ao X!</h1>
+      <p>Este é o melhor lugar para ver o que está acontecendo no mundo. Encontre algumas pessoas e assuntos para seguir agora.</p>
+    </div>
+    <form class="form" id="form">
+      <div class="logo">
+        <img src="style/images/twitter1.png" alt="Logo">
+      </div>
+      <label id="label-principal" for="name">Login</label>
+      <div class="input-span">
+        <label for="name" class="label">Nome</label>
+        <input type="text" name="name" id="name" placeholder="Nome">
+      </div>
+      <div class="input-span">
         <label for="email" class="label">Email</label>
-        <input type="text" id="email" name="email" placeholder="Email" />
-        <input type="submit" value="Submit" />
-
-        <span class="span"
-          >já tem uma conta? <a href="login.html">Entrar</a></span
-        >
-      </form>
-    </main>
-    <script src="cadastro.js"></script>
-  </body>
+        <input type="email" name="email" id="email" placeholder="Email">
+      </div>
+      <div class="input-span">
+        <label for="password" class="label">Password</label>
+        <input type="password" name="password" id="password" placeholder="Password">
+      </div>
+      <input id="submit" type="submit" value="Log in"></a>
+      <span class="span">Já tenho conta?<a href="login.html">Entrar</a></span>
+    </form>
+  </main>
+  <script src="cadastro.js"></script>
+</body>
 </html>
