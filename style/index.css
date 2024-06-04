@@ -12,6 +12,7 @@
 
 body {
   background-color: var(--white);
+  height: 90%;
 }
 
 /* HEADER  */
@@ -29,6 +30,10 @@ header {
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     margin-bottom: 32px;
     padding: 12px;
+}
+
+a{
+  text-decoration: none;
 }
 
 .sign{
@@ -157,8 +162,6 @@ section{
 
 /*  FIM DO POST  */
 
-
-
 .actions {
   height: 50px;
   width: 498px;
@@ -173,3 +176,25 @@ section{
   height: 45px;
   width: 45px;
 } 
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  margin-top: 18px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, #dee1e2 0px 0px 0px 1px;
+}
+
+.footer-btns button {
+  margin: 0 5px ;
+  font-size: 17px;
+  padding: 0.5em 2em;
+  border: transparent;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  background: black;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+ }
+

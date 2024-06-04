@@ -1,4 +1,4 @@
-const login = document.getElementById("formlogin");
+const login = document.querySelector("form");
 
 login.addEventListener("submit", (e) => {
   const email = document.getElementById("email");
@@ -21,3 +21,5 @@ login.addEventListener("submit", (e) => {
 
   console.log(userData);
 });
+
+

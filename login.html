@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/global.css">
-  <link rel="stylesheet" href="style/login.css">
-  <title>Login</title>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="style/images/twitter.png" alt="Logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="bemvindo">
-      <h1>Bem-vindo de volta ao X!</h1>
-      <p>Este é o melhor lugar para ver o que está acontecendo no mundo. Encontre algumas pessoas e assuntos para seguir agora.</p>
-    </div>
-    <form class="form" id="form">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
       <div class="logo">
-        <img src="style/images/twitter1.png" alt="Logo">
+        <img src="style/images/twitter.png" alt="Logo" />
       </div>
-      <label id="label-principal" for="name">Login</label>
-      <div class="input-span">
-        <label for="email" class="label">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="bemvindo">
+        <h1>Bem-vindo de volta ao X!</h1>
+        <p>Faça login para saber o que está acontecendo no mundo.</p>
       </div>
-      <div class="input-span">
-        <label for="password" class="label">Password</label>
-        <input type="password" name="password" id="password" placeholder="Password">
-      </div>
-      <input id="submit" type="submit" value="Log in">
-      <span class="span">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></span>
-    </form>
-  </main>
-  <script src="login.js"></script>
-</body>
+      <form class="form">
+        <div class="logo">
+          <img src="style/images/twitter1.png" alt="Logo" />
+        </div>
+        <label id="label-principal" for="name">Login</label>
+        <div class="input-span">
+          <label for="email" class="label">Email</label>
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </div>
+        <div class="input-span">
+          <label for="password" class="label">Password</label>
+          <input type="password" name="password" id="password" placeholder="Password"/>
+        </div>
+        <input id="submit" type="submit" value="Log in" />
+        <span class="span"
+          >Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></span
+        >
+      </form>
+    </main>
+    <script src="login.js"></script>
+  </body>
 </html>

@@ -1,14 +1,19 @@
 const initialImage = "style/images/curtida-vazia.png";
 const alternateImage = "style/images/curtida-vermelha.png";
 const urlImg = "http://10.92.198.38:8080/";
+const limitPost = 3;
+var currentPage = 1;
 
-async function getPersons() {
-  const response = await fetch("http://10.92.198.38:8080/feed/posts");
+async function getPersons(currentPage) {
+  const response = await fetch(
+    `http://10.92.198.38:8080/feed/posts?page=${currentPage}&&perPage=10`
+  );
   const posts = await response.json();
   console.log(posts);
+  return posts;
 }
 
-fetch("http://10.92.198.38:8080/feed/posts")
+fetch(`http://10.92.198.38:8080/feed/posts?page=${currentPage}`)
   .then((response) => response.json())
   .then((data) => cards(data));
 
@@ -45,6 +50,23 @@ function cards(data) {
     `;
     feed.appendChild(post);
 
+    async function loadPage(page) {
+      const data = await getPersons(page);
+      cards(data);
+    } 
+    
+    document.getElementById("btn-next").addEventListener("click", () => {
+      currentPage++;
+      loadPage(currentPage);
+    });
+     
+    document.getElementById("btn-prev").addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        loadPage(currentPage);
+      }
+    });
+
     const likeButton = post.querySelector(".like");
     likeButton.addEventListener("click", () => {
       const likeImg = likeButton.querySelector(".like-img");
@@ -55,4 +77,10 @@ function cards(data) {
       }
     });
   });
+
 }
+
+
+
+  
+

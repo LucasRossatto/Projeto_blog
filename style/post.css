@@ -15,13 +15,76 @@ body {
 }
 
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000000;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 24px;
   text-align: center;
-  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 32px;
+    padding: 12px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.sign{
+  display: flex;
+  gap: 8px;
+}
+
+.sign button{
+  padding: 10px 0;
+  width: 100px;
+  border: 3px solid #000000;
+  border-radius: 30px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 550;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.sign a{
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+.sign a:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sign button:hover{
+  background-color: #000000;
+  color: #fff;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo  {
+  width: 50px;
+  height: 50px;
+}
+
+.img-content img{
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: var(--light-blue);
 }
 
 form{
@@ -38,9 +101,10 @@ main {
 
 #form-post {
   margin-top: 50px;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 8px;
+  padding: 30px;
   font-family: sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 label {
@@ -74,6 +138,7 @@ input[type="submit"] {
 
 a {
   color: var(--light-blue);
+  text-decoration: none;
 }
 
 .custum-file-upload {

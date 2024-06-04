@@ -18,7 +18,7 @@ post.addEventListener("submit", (e) => {
         body: formData,
         headers: {
             Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzQFJvc3NhdHRvLmNvbSIsInVzZXJJZCI6IjY2NDNhZWFmYmViOGE4MDUzOTE0NzFjMyIsImlhdCI6MTcxNTcxMTY4NSwiZXhwIjoxNzE1NzI2MDg1fQ.eKF-eDDbLHTSShP9RM-twXR1pOhg8qHlUspAAD6ch2U"
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzdGVzdGVAZ21haWwuY29tIiwidXNlcklkIjoiNjY1ZGZiOWFhNjA5MjMyMTY1NmIwZDVkIiwiaWF0IjoxNzE3NDM2MzkzLCJleHAiOjE3MTc0NTA3OTN9.q09nSMSAIjq1znDmQ76xrI8sTefOxuBeYtGkrACT-BE"
             ,
         },
     })
