@@ -132,6 +132,7 @@ section{
   font-weight:500;
 }
 
+
 #name{
   font-size: 26px;
 }
@@ -198,3 +199,13 @@ footer{
   cursor: pointer;
  }
 
+
+ .left {
+  display: flex;
+  gap: 8px;
+}
+
+.left img {
+  width: 30px;
+  margin-top: 8px;
+}

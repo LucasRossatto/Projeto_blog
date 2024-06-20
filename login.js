@@ -16,10 +16,9 @@ login.addEventListener("submit", (e) => {
     headers: { "Content-type": "application/json; charset=UTF-8" },
   })
     .then((result) => result.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
-
-  console.log(userData);
+    .then((data) => {
+      // Store the token in localStorage
+      localStorage.setItem("token", data.token);
+      console.log(data);
+    });
 });
-
-

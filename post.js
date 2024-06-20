@@ -12,14 +12,20 @@ post.addEventListener("submit", (e) => {
     formData.append("title", title);
     formData.append("content", content);
     formData.append("image", file);
+
+
+    const token = localStorage.getItem("token"); // Retrieve the stored token
+        if (!token) {
+          console.error("No token found. Please login first.");
+          return;
+        }
  
+
     fetch("http://10.92.198.38:8080/feed/post", {
         method: "POST",
         body: formData,
         headers: {
-            Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzdGVzdGVAZ21haWwuY29tIiwidXNlcklkIjoiNjY1ZGZiOWFhNjA5MjMyMTY1NmIwZDVkIiwiaWF0IjoxNzE3NDM2MzkzLCJleHAiOjE3MTc0NTA3OTN9.q09nSMSAIjq1znDmQ76xrI8sTefOxuBeYtGkrACT-BE"
-            ,
+            Authorization: `Bearer ${token}`,
         },
     })
         .then((result) => result.json())
@@ -29,3 +35,27 @@ post.addEventListener("submit", (e) => {
  
  
 });
+
+/*const urlImg = "http://10.92.198.38:8080/";
+async function getUserProfile() {
+    try {
+      const token = localStorage.getItem("token"); // Retrieve the stored token
+      if (!token) {
+        console.error("No token found. Please login first.");
+        return;
+      }
+  
+      const response = await fetch('http://10.92.198.38:8080/user/profile', {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await response.json();
+      console.log(data);
+      cards(data);
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  }/*
